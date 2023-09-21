@@ -38,6 +38,10 @@
   text-decoration: none;
   color: var(--letter-one-color);
 }
+#navLinks a:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
 #navButtons {
   display: flex;
   gap: 20px;
@@ -51,6 +55,13 @@
   font-weight: bolder;
   box-shadow: 1px 1px 2px 1px var(--button-color);
 }
+.orangeButton:hover {
+  cursor: pointer;
+  background-color: #f9c06aa2;
+  box-shadow: none;
+  color: var(--letter-one-color);
+  transition: 0.3s;
+}
 .transparentButton {
   padding: 10px 15px;
   background-color: transparent;
@@ -59,6 +70,9 @@
   border-radius: 30px;
   border: none;
   font-weight: bolder;
+}
+.transparentButton:hover {
+  cursor: pointer;
 }
 #headerSection {
   width: 48%;
@@ -81,7 +95,7 @@
   align-items: center;
   justify-content: space-around;
 }
-#firstMainSection img {
+#coffeCupImg {
   margin-top: 50px;
 }
 #firstMainSectionDiv {
@@ -163,7 +177,7 @@
 .coffeeBlastRigth {
   width: 385px;
   margin-bottom: -150px;
-  margin-left: 69.5%;
+  align-self: end;
 }
 #thirdMainSection {
   display: flex;
@@ -191,6 +205,7 @@
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .items {
   text-align: center;
@@ -233,24 +248,23 @@
   line-height: 30px;
   padding: 20px 0px 30px 0px;
 }
-#forthMainSection img {
+#coffeeCup02 {
   padding: 20px;
   z-index: 1;
 }
 #beansImg {
   width: 450px;
-  margin-left: 64.3%;
+  align-self: end;
   margin-top: -484px;
 }
-#fifthMainSection {
-  text-align: center;
-}
 #fifthMainSection h2 {
-  margin-top: 50px;
+  text-align: center;
+  margin-top: 30px;
   color: var(--letter-two-color);
   font-size: 44px;
 }
 #fifthMainSection p {
+  text-align: center;
   font-weight: 100;
   color: var(--letter-three-color);
   padding: 20px 0 35px 0;
@@ -258,13 +272,15 @@
 #fifthMainSectionDiv {
   background-color: var(--background-color);
   border: 1px solid var(--button-color);
+  text-align: center;
   width: 70%;
   margin: auto;
 }
-#fifthMainSectionDiv img {
+#textImg {
   display: block;
   text-align: left;
-  margin: 20px;
+  margin: 30px 30px 10px 30px;
+  width: 10%;
 }
 #fifthMainSectionDiv p {
   width: 80%;
@@ -277,12 +293,156 @@
   font-size: 25px;
 }
 #blastRigth {
-  position: absolute;
-  top: 510%;
-  left: 70.5%;
+  align-self: end;
+  margin-bottom: -270px;
+  z-index: 1;
 }
 #blastLeft {
-  position: absolute;
-  top: 570%;
-  left: 0%;
+  margin-top: -120px;
+}
+@media (max-width: 1075px) {
+  #secondMainSectionDiv {
+    align-items: center;
+    justify-content: center;
+  }
+  .coffeeBlastRigth {
+    margin-bottom: -20px;
+  }
+}
+@media (max-width: 950px) {
+  #navLinks {
+    display: flex;
+    gap: 30px;
+  }
+  #coffeeCup02 {
+    width: 40%;
+  }
+  #blastRigth {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 820px) {
+  #blastLeft {
+    margin-top: -60px;
+  }
+}
+@media (max-width: 795px) {
+  #beansImg {
+    width: 400px;
+    margin-top: -432px;
+  }
+}
+@media (max-width: 770px) {
+  #nav {
+    padding: 30px 30px;
+  }
+  #navLinks {
+    width: 200px;
+    flex-wrap: wrap;
+  }
+  #navButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #coffeCupImg {
+    width: 50%;
+  }
+  .coffeeBlast {
+    margin-top: -110px;
+  }
+  #secondMainSection {
+    text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  #headerSection {
+    width: 80%;
+  }
+  #forthMainSection {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 650px) {
+  #firstMainSectionDiv {
+    width: 90%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  #firstMainSectionDiv {
+    margin-left: 0px;
+  }
+  #beansImg {
+    width: 300px;
+    margin-top: -324px;
+  }
+  #fifthMainSection {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 500px) {
+  #nav {
+    flex-wrap: wrap;
+  }
+  #nav {
+    justify-content: center;
+    gap: 20px;
+  }
+  #navImg {
+    width: 280px;
+    padding-bottom: 20px;
+  }
+  #firstMainSection {
+    padding-top: 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+  #coffeCupImg {
+    margin-top: 0;
+    width: 70%;
+  }
+  #thirdMainSection {
+    text-align: center;
+  }
+  #blastLeft,
+  #blastRigth,
+  .coffeeBlastRigth,
+  .coffeeBlast {
+    width: 280px;
+  }
+}
+@media (max-width: 430px) {
+  #forthMainSection {
+    padding-top: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  #forthMainSectionDiv {
+    width: 90%;
+  }
+  #forthMainSectionDiv p {
+    width: 100%;
+  }
+  #coffeeCup02 {
+    width: 60%;
+  }
+}
+@media (max-width: 380px) {
+  #nav {
+    flex-direction: column;
+  }
+  #navLinks {
+    padding-left: 27px;
+  }
+  #navButtons {
+    padding-top: 10px;
+    flex-direction: row;
+  }
+  #headerSection {
+    width: 100%;
+  }
+  #navImg {
+    width: 230px;
+    padding-bottom: 20px;
+  }
 }
